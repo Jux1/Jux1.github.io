@@ -19,25 +19,7 @@
 ]]></content>
   </entry>
   <entry>
-    <title>测试blog</title>
-    <url>/2022/01/31/%E6%B5%8B%E8%AF%95blog/</url>
-    <content><![CDATA[<h2 id="text"><a href="#text" class="headerlink" title="text"></a>text</h2><p>测试成功</p>
-<h2 id="图片测试"><a href="#图片测试" class="headerlink" title="图片测试"></a>图片测试</h2><p><img src="/2022/01/31/%E6%B5%8B%E8%AF%95blog/v2-b5bac0731e9e7c3f1e4d3d21466a0dff_hd.jpg" alt="v2-b5bac0731e9e7c3f1e4d3d21466a0dff_hd"></p>
-<p>图片测试成功</p>
-<h2 id="代码块样式测试"><a href="#代码块样式测试" class="headerlink" title="代码块样式测试"></a>代码块样式测试</h2><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N=<span class="number">100010</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-      <categories>
-        <category>text</category>
-      </categories>
-      <tags>
-        <tag>text</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>寒假每日一题</title>
+    <title>寒假每日一题 week1</title>
     <url>/2022/01/31/%E5%AF%92%E5%81%87%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/</url>
     <content><![CDATA[<h2 id="寒假每日一题"><a href="#寒假每日一题" class="headerlink" title="寒假每日一题"></a><a href="https://www.acwing.com/activity/content/88/"><strong>寒假每日一题</strong></a></h2><p>[TOC]</p>
 <h2 id="2022-1-14-闪烁-状态压缩-找环"><a href="#2022-1-14-闪烁-状态压缩-找环" class="headerlink" title="2022/1/14 闪烁                                                    状态压缩 找环"></a><a href="https://www.acwing.com/activity/content/problem/content/6513/">2022/1/14 闪烁</a>                                                    状态压缩 找环</h2><p>一共有16个灯泡               2^16=65536 个状态<br>如果暴力法：时间复杂度O（NB）  10^16级别，一定会超时，需要考虑优化<br><strong>分析</strong>：从某个状态开始，每变一步会到下一个状态，会变10^15次，<strong>但是我们一共只有2^16次 必然会出现循环</strong><br><img src="/2022/01/31/%E5%AF%92%E5%81%87%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/image-20220114110521401.png" alt="image-20220114110521401" style="zoom: 80%;"><img src="/2022/01/31/%E5%AF%92%E5%81%87%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/image-20220114112624276.png" alt="image-20220114112624276" style="zoom:80%;"><br>需要注意的是：(状态压缩那里)<br>两个十进制数相或 在c++中会先转换成2进制数再进行或操作<br>如：2|6 = 10|110=110 结果还是6         本题中：<code>state |= x &lt;&lt; i;         res |= (x ^ y) &lt;&lt; i; x异或上y</code><br> 求n的第k位数字：<code>n &gt;&gt; k &amp; 1</code>                            <code>int x = state &gt;&gt; i &amp; 1</code><br><strong>本题主要是位运算操作不熟，导致了花的时间较多</strong></p>
@@ -123,6 +105,24 @@
       </categories>
       <tags>
         <tag>每日一题</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>测试blog</title>
+    <url>/2022/01/31/%E6%B5%8B%E8%AF%95blog/</url>
+    <content><![CDATA[<h2 id="text"><a href="#text" class="headerlink" title="text"></a>text</h2><p>测试成功</p>
+<h2 id="图片测试"><a href="#图片测试" class="headerlink" title="图片测试"></a>图片测试</h2><p><img src="/2022/01/31/%E6%B5%8B%E8%AF%95blog/v2-b5bac0731e9e7c3f1e4d3d21466a0dff_hd.jpg" alt="v2-b5bac0731e9e7c3f1e4d3d21466a0dff_hd"></p>
+<p>图片测试成功</p>
+<h2 id="代码块样式测试"><a href="#代码块样式测试" class="headerlink" title="代码块样式测试"></a>代码块样式测试</h2><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N=<span class="number">100010</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>text</category>
+      </categories>
+      <tags>
+        <tag>text</tag>
       </tags>
   </entry>
 </search>
